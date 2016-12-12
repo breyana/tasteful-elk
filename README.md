@@ -24,26 +24,29 @@ What does quality code look like?
 ## User Stories & Specifications
 
 **As a User...**
-- [x] I can access the app the web.
-- [x] Choose 1 of (at least) 3 card layouts.
-- [x] Learn about each card layouts.
-- [x] Sort cards into the layouts face down and click them to turn them over.
-- [x] I can get self reflection questions based on my card results.
+- [] I can access the app the web.
+- [] Choose 1 of (at least) 3 card layouts.
+- [] Learn about each card layouts.
+- [] Sort cards into the layouts face down and click them to turn them over.
+- [] I can get self reflection questions based on my card results.
 - [ ] I am pleased by the user experience. The app is both attractive and intuitive to use.
 
 **Additional Specifications:**
-- [x] Create a library of Tarot cards and write a function that randomly presents them
-- [x]  If you use any frameworks or code libraries cite them.
+- [] Create a library of Tarot cards and write a function that randomly presents them
+- []  If you use any frameworks or code libraries cite them.
 - [ ] Use design & UX principals to make the app clear and easy to use.
-- [x] Use Node to create a back end
-- [x] Use React Native to create and deploy a functional phone app.
-- [ ] This is a multi page app:
+- [] Use Node to create a back end
+- [] Use React Native to create and deploy a functional phone app.
+- [ ] ~~This is a multi page app:~~
 
-Optional Goal Ideas
-- [ ]  NOT use any front-end framework [no react, do it from scratch]
-- [ ] Use react native to deploy as a iphone app.
+Stretch Goal Ideas
+- [ ]  ~~NOT use any front-end framework [no react, do it from scratch]~~
+- [ ] ~~Use react native to deploy as a iphone app.~~
 - [ ] Use Test Driven Development using Jasmine.
-- [ ] card flipping/sorting animations
+- [ ] card flipping/sorting animations  
+- [ ] Celebrity Humor Tarot Deck
+- [ ] Change the meaning of the card based on the positioning with other cards
+
 ### Required
 
 _Do not remove these specs - they are required for all goals_.
