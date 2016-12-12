@@ -37,7 +37,7 @@ What does quality code look like?
 - [ ]  If you use any frameworks or code libraries cite them.
 - [ ] Use design & UX principals to make the app clear and easy to use.
 - [ ] Use Node to create a back end
-- [ ] Use React Native to create and deploy a functional phone app.
+- [ ] ~~Use React Native to create and deploy a functional phone app.~~
 - [ ] ~~This is a multi page app:~~
 
 Stretch Goal Ideas
