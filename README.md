@@ -20,7 +20,8 @@ What does quality code look like?
 - Reinforce back end and front end development skills.
 - build skills in React
 - deploy app using heroku
-- [Learn about](http://www.jjg.net/elements/pdf/elements.pdf) user experience.
+- [Learn about](http://www.jjg.net/elements/pdf/elements.pdf) user experience.  
+
 ## User Stories & Specifications
 
 **As a User...**
