@@ -1,0 +1,15 @@
+.square {
+  height: 120px;
+  width: 70px;
+  border-width: 5px;
+  border-color: darkred;
+  margin: auto;
+  border-style: solid;
+}
+.tarotgrid {
+    width: 240px;
+}
+div {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
