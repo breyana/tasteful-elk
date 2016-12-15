@@ -40,10 +40,6 @@ var shuffled = shuffleDeck(cardData)
 // }
 
 
-
-
-
-
 // var backOfCard = "<img src=\"./CardImages/cardback.jpg\" width=\"70px\">"
 // var revealedCard = cardData[0].cardImage
 //
@@ -51,19 +47,19 @@ var shuffled = shuffleDeck(cardData)
 
 
 function changeImage() {
-  var one_card = document.getElementById("position-2")
-  if (one_card.firstChild.nodeValue == "./CardImages/cardback.jpg") {
-    one_card.firstChild.nodeValue = "./CardImages/cups_2.jpg"
-  } else {
-    one_card.firstChild.nodeValue = "./CardImages/cardback.jpg"
-  }
+  // var one_card = document.getElementById("position-2")
+  // if (one_card.firstChild.nodeValue == "./CardImages/cardback.jpg") {
+  //   one_card.firstChild.nodeValue = "./CardImages/cups_2.jpg"
+  // } else {
+  //   one_card.firstChild.nodeValue = "./CardImages/cardback.jpg"
+  // }
 
 
       //  if (document.getElementById("position-2").src == "./CardImages/cardback.jpg")
       //  {
       //     // var surfacedCard = cardData.map(function(a) {return a.cardImage;});
       //     // use cardData[0].cardImage instead
-      //     document.getElementById('position-2').src = "./CardImages/cups_2.jpg"
+          document.getElementById('position-2').src = "./CardImages/cups_2.jpg"
       //  }
       //  else
       //  {
