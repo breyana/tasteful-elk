@@ -28,44 +28,47 @@ function shuffleDeck(array) {
   return array;
 }
 
-var shuffled = shuffleDeck(cardData)
-//contains the random numbers generated
+function flipCard(index, shuffled, position) {
+  return function() {
+    position.innerHTML = `<img src="./CardImages/${shuffled[index]}.jpg" width="70px" />`
+  }
+}
 
-// function () {
-//   var squares = [];
-//   var randomNumbers = []
-//   //matches randomNumbers with index numbers in the cardData array
-//   // map??
-//   return squares //changes with the number of cards in the index
+// function reset(position){
+//   return function() {
+//     position.innerHTML = ""
+//   }
 // }
 
+function dealThree() {
+  // var elem = document.getElementsByClassName("square")
+  // console.log(elem)
+  // elem[].innerHTML = ""
 
-// var backOfCard = "<img src=\"./CardImages/cardback.jpg\" width=\"70px\">"
-// var revealedCard = cardData[0].cardImage
-//
-// var
+  var shuffled = shuffleDeck(cardImages)
+  for (var index = 1; index < 10; index++) {
+    var position = document.getElementById('position-' + index)
+    if (index >= 4) {
+      position.innerHTML = ''
+    } else {
+      position.innerHTML = '<img src="./CardImages/cardback.jpg" width="70px" />'
+      position.addEventListener("click", flipCard(index, shuffled, position))
+    }
+    
+  }
+}
 
-
-function changeImage() {
-  // var one_card = document.getElementById("position-2")
-  // if (one_card.firstChild.nodeValue == "./CardImages/cardback.jpg") {
-  //   one_card.firstChild.nodeValue = "./CardImages/cups_2.jpg"
-  // } else {
-  //   one_card.firstChild.nodeValue = "./CardImages/cardback.jpg"
-  // }
-
-
-      //  if (document.getElementById("position-2").src == "./CardImages/cardback.jpg")
-      //  {
-      //     // var surfacedCard = cardData.map(function(a) {return a.cardImage;});
-      //     // use cardData[0].cardImage instead
-          document.getElementById('position-2').src = "./CardImages/cups_2.jpg"
-      //  }
-      //  else
-      //  {
-      //     document.getElementById("position-2").src = "./CardImages/cardback.jpg";
-      //  }
-   }
-
-var el = document.getElementById("tarotgrid");
-el.addEventListener("click", changeImage, false)
+function dealFive() {
+  var elem = document.getElementsByClassName("square")
+  elem.innerHTML = ""
+  var shuffled = shuffleDeck(cardImages)
+  for (var index = 1; index < 10; index++) {
+    var position = document.getElementById('position-' + index)
+    if (index === 1 || index === 3 || index === 7 || index === 9) {
+      position.innerHTML = ''
+    } else {
+    position.innerHTML = '<img src="./CardImages/cardback.jpg" width="70px" />'
+    position.addEventListener("click", flipCard(index, shuffled, position))
+  }
+}
+}
