@@ -5,12 +5,14 @@
   </head>
 
   <body>
+    <button id="pick-3-cards" onclick="dealThree()">Past, Present, Future</button>
+    <button id="pick-5-cards" onclick="dealFive()">Celtic Cross</button>
+
     <div class="tarotgrid">
       <div>
         <div class="square" id="position-1">
         </div>
-        <div class="square">
-        <img id="position-2" onclick="changeImage()" src="./CardImages/cardback.jpg" width="70px">
+        <div class="square" id="position-2">
         </div>
         <div class="square" id="position-3">
         </div>
@@ -35,7 +37,7 @@
       </div>
     </div> <!-- end tarotgrid -->
 
-    <div class="description">
+    <div id="description">
 
     </div>
 
