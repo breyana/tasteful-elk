@@ -1,15 +1,22 @@
 .square {
-  height: 120px;
-  width: 70px;
-  border-width: 5px;
+  height: 240px;
+  width: 140px;
+  /*border-width: 5px;
   border-color: darkred;
   margin: auto;
-  border-style: solid;
+  border-style: solid;*/
 }
 .tarotgrid {
-    width: 240px;
+    width: 460px;
 }
-div {
-    display: inline-flex;
-    flex-wrap: wrap;
+div.square {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  padding: 5px;
+}
+
+img {
+    width: 140px;
+    height: 240px;
 }
