@@ -1,14 +1,10 @@
-function singleCard () {
 
-}
-
-function threeCards () {
-
-}
-
-function fiveCards () {
-
-}
+// function renderCards() {
+//   $('.tarotgrid').on('click', function(this) {
+//     //into this isert a randomly generated card front
+//     //into description div add the description for this card
+//   })
+// }
 
 function shuffleDeck(array) {
   var m = array.length, t, i;
@@ -28,21 +24,24 @@ function shuffleDeck(array) {
   return array;
 }
 
+
 function flipCard(index, shuffled, position) {
   return function() {
-    position.removeEventListener("click", flipCard(index, shuffled, position), false)
+    // position.removeEventListener("click", flipCard(index, shuffled, position), false)
     position.innerHTML = `<img src="./CardImages/${shuffled[index]}.jpg" width="70px" />`
-    var cardDescriptionBox = document.createElement('div')
-    cardDescriptionBox.innerHTML = cardinfo[shuffled[index]]
-    document.getElementById('description').appendChild(cardDescriptionBox)
+    var blurb = document.createElement('div')
+    blurb.innerHTML = cardinfo[shuffled[index]]
+    document.getElementById('description').appendChild(blurb)
   }
-} //this function takes the values specified in the other functions
+}
 
 function dealThree() {
   var shuffled = shuffleDeck(cardImages)
+  document.getElementById('description').innerHTML = ""
   document.getElementById('description').innerHTML = "<h1>Reading:</h1>"
   for (var index = 1; index < 10; index++) {
     var position = document.getElementById('position-' + index)
+    // position.removeEventListener("click", flipCard(index, shuffled, position), false)
     if (index >= 4) {
       position.innerHTML = ''
     } else {
@@ -52,10 +51,9 @@ function dealThree() {
   }
 }
 
+
 function dealFive() {
   document.getElementById('description').innerHTML = "<h1>Reading:</h1>"
-  // var elem = document.getElementsByClassName("square")
-  // elem.innerHTML = ""
   var shuffled = shuffleDeck(cardImages)
   for (var index = 1; index < 10; index++) {
     var position = document.getElementById('position-' + index)

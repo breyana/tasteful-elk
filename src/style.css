@@ -1,22 +1,30 @@
+.main_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.tarotgrid {
+  max-width: 500px;
+  min-width: 500px;
+}
+
 .square {
   height: 240px;
   width: 140px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 5px;
   /*border-width: 5px;
   border-color: darkred;
   margin: auto;
   border-style: solid;*/
 }
-.tarotgrid {
-    width: 460px;
-}
-div.square {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction:row;
-  padding: 5px;
+
+#description div {
+  margin: 10px 0px
 }
 
 img {
-    width: 140px;
-    height: 240px;
+  width: 140px;
+  height: 240px;
 }
