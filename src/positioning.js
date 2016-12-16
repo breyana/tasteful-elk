@@ -31,44 +31,40 @@ function shuffleDeck(array) {
 function flipCard(index, shuffled, position) {
   return function() {
     position.innerHTML = `<img src="./CardImages/${shuffled[index]}.jpg" width="70px" />`
+    var cardDescriptionBox = document.createElement('div')
+    cardDescriptionBox.innerHTML = cardinfo[shuffled[index]]
+    document.getElementById('description').appendChild(cardDescriptionBox)
+    document.position.removeEventListener("click", flipCard(index, shuffled, position), false)
   }
-}
-
-// function reset(position){
-//   return function() {
-//     position.innerHTML = ""
-//   }
-// }
+} //this function takes the values specified in the other functions
 
 function dealThree() {
-  // var elem = document.getElementsByClassName("square")
-  // console.log(elem)
-  // elem[].innerHTML = ""
-
   var shuffled = shuffleDeck(cardImages)
+  document.getElementById('description').innerHTML = ""
   for (var index = 1; index < 10; index++) {
     var position = document.getElementById('position-' + index)
     if (index >= 4) {
       position.innerHTML = ''
     } else {
       position.innerHTML = '<img src="./CardImages/cardback.jpg" width="70px" />'
-      position.addEventListener("click", flipCard(index, shuffled, position))
+      position.addEventListener("click", flipCard(index, shuffled, position), false)
     }
-    
   }
 }
 
 function dealFive() {
-  var elem = document.getElementsByClassName("square")
-  elem.innerHTML = ""
+  document.getElementById('description').innerHTML = ""
+  // var elem = document.getElementsByClassName("square")
+  // elem.innerHTML = ""
   var shuffled = shuffleDeck(cardImages)
   for (var index = 1; index < 10; index++) {
     var position = document.getElementById('position-' + index)
+    position.removeEventListener("click", flipCard(index, shuffled, position))
     if (index === 1 || index === 3 || index === 7 || index === 9) {
       position.innerHTML = ''
     } else {
     position.innerHTML = '<img src="./CardImages/cardback.jpg" width="70px" />'
-    position.addEventListener("click", flipCard(index, shuffled, position))
+    position.addEventListener("click", flipCard(index, shuffled, position), false)
   }
 }
 }
