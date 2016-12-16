@@ -1,10 +1,10 @@
 body {
-  background: red; /* For browsers that do not support gradients */    
+  background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, #F0E46B, #0B3E91); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #F0E46B, #0B3E91); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #F0E46B, #0B3E91); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #F0E46B, #0B3E91); /* Standard syntax (must be last) */
-```
+  margin: 40px;
 }
 .main_container {
   display: flex;
@@ -30,7 +30,17 @@ body {
 }
 
 #description div {
-  margin: 10px 0px
+  margin: 0px 0px 10px 20px;
+  font-family: 'Arapey', serif;
+}
+
+#description {
+  background: rgba(255,255,255,0.5);
+  width: 50%;
+}
+
+#top-row {
+  padding-top: 15px;
 }
 
 img {
@@ -61,13 +71,13 @@ button {
    vertical-align: middle;
    }
 
-nav { 
+nav {
    padding: 5px;
    display: flex;
    justify-content: center;
    align-items: center;
     }
-   
+
 .button:hover {
    border-top-color: #28597a;
    background: #28597a;
