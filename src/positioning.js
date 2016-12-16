@@ -30,17 +30,17 @@ function shuffleDeck(array) {
 
 function flipCard(index, shuffled, position) {
   return function() {
+    position.removeEventListener("click", flipCard(index, shuffled, position), false)
     position.innerHTML = `<img src="./CardImages/${shuffled[index]}.jpg" width="70px" />`
     var cardDescriptionBox = document.createElement('div')
     cardDescriptionBox.innerHTML = cardinfo[shuffled[index]]
     document.getElementById('description').appendChild(cardDescriptionBox)
-    document.position.removeEventListener("click", flipCard(index, shuffled, position), false)
   }
 } //this function takes the values specified in the other functions
 
 function dealThree() {
   var shuffled = shuffleDeck(cardImages)
-  document.getElementById('description').innerHTML = ""
+  document.getElementById('description').innerHTML = "<h1>Reading:</h1>"
   for (var index = 1; index < 10; index++) {
     var position = document.getElementById('position-' + index)
     if (index >= 4) {
@@ -53,7 +53,7 @@ function dealThree() {
 }
 
 function dealFive() {
-  document.getElementById('description').innerHTML = ""
+  document.getElementById('description').innerHTML = "<h1>Reading:</h1>"
   // var elem = document.getElementsByClassName("square")
   // elem.innerHTML = ""
   var shuffled = shuffleDeck(cardImages)
